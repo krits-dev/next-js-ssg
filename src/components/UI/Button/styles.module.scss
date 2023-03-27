@@ -1,0 +1,22 @@
+@import '@/assets/scss/helpers/all.scss';
+
+.button {
+  width: fit-content;
+  margin-bottom: 8px;
+  button {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background-color: $yellow;
+    border: none;
+    cursor: pointer;
+    font-family: $font_primary;
+    font-size: 18px;
+    line-height: 140%;
+    padding: 4px 24px;
+    color: $white_secondary;
+    text-align: center;
+    letter-spacing: normal;
+    font-weight: 700;
+  }
+}

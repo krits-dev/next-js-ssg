@@ -1,0 +1,22 @@
+@import '@/assets/scss/helpers/all.scss';
+
+.pageNav {
+  display: flex;
+  font-family: $font_primary;
+  font-size: 14px;
+  line-height: 150%;
+  color: $blue;
+  font-weight: 400;
+  letter-spacing: normal;
+  padding: 20px 0 48px 0;
+  a {
+    color: $blue;
+  }
+  a:visited,
+  a:active {
+    color: $blue;
+  }
+  a:hover {
+    color: $yellow;
+  }
+}

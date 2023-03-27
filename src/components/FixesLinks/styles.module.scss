@@ -1,0 +1,28 @@
+@import '@/assets/scss/helpers/all.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  a {
+    font-family: $font_primary;
+    color: $blue;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 900;
+    text-size-adjust: 100%;
+    letter-spacing: normal;
+    padding: 8px 0;
+    &:nth-child(1) {
+      margin-top: 24px;
+    }
+  }
+  a:hover {
+    color: $yellow;
+  }
+  a:before {
+    content: url('./icon.svg');
+    margin-right: 10px;
+    margin-top: 5px;
+    vertical-align: middle;
+  }
+}

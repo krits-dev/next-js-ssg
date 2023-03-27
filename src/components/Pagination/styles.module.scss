@@ -1,0 +1,24 @@
+@import '@/assets/scss/helpers/all.scss';
+
+.wrapper {
+  display: flex;
+  padding: 64px 0;
+  justify-content: center;
+  a {
+    font-family: $font_primary;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+    padding: 6px 12px;
+    border-right: 1px solid rgb(222, 225, 230);
+    border-bottom: 1px solid rgb(222, 225, 230);
+    border-top: 1px solid rgb(222, 225, 230);
+    color: $blue;
+    &:nth-child(1) {
+      border-left: 1px solid rgb(222, 225, 230);
+    }
+  }
+  a:hover {
+    color: $yellow;
+  }
+}

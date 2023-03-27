@@ -1,0 +1,16 @@
+.fixesPageContainer {
+  display: flex;
+  flex-direction: column;
+  .wrapper {
+    display: flex;
+    padding-bottom: 32px;
+  }
+  .left {
+    width: 50%;
+  }
+  .right {
+    width: 50%;
+    padding-left: 12px;
+    padding-top: 120px;
+  }
+}

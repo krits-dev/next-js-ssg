@@ -1,0 +1,36 @@
+@import '@/assets/scss/helpers/all.scss';
+
+.stateCity {
+  padding: 96px 24px 0;
+  height: auto;
+  .border {
+    border-bottom: 1px solid $white-ui;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    height: auto;
+  }
+  .states {
+    padding: 32px 0;
+    display: flex;
+    
+    max-height: 245px;
+    a {
+      font-family: $font_primary;
+      color: $blue;
+      font-size: 16px;
+      line-height: 140%;
+      font-weight: 500;
+      letter-spacing: normal;
+    }
+    a:hover {
+      color: $yellow;
+    }   
+  }
+  .column {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .spaceBetween {
+    justify-content: space-between;
+  }
+}

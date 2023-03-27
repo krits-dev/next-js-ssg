@@ -1,0 +1,51 @@
+@import '@/assets/scss/helpers/all.scss';
+
+.title {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 452px;
+  padding-top: 96px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  img {
+    object-fit: cover;
+  }
+  .leftBG {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 42%;
+    top: 0;
+    left: 0;
+    background-image: $bg_blue_hexagon;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .roundPercent {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 332px;
+    height: 263px;
+    padding: 75px 30px 15px 80px;
+    background-image: $bg_round_percent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $font_primary;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 150%;
+    color: $white_primary;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    letter-spacing: normal;
+    text-shadow: rgba(0, 0, 0, 0.467);
+    span {
+      font-size: 70px;
+      line-height: 100%;
+      padding-bottom: 8px;
+    }
+  }
+}

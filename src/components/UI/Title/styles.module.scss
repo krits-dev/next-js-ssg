@@ -1,0 +1,56 @@
+@import '@/assets/scss/helpers/all.scss';
+
+.title {
+  text-align: left;
+  .page {
+    max-width: 580px;
+    h1 {
+      font-family: $font_primary;
+      color: $white_primary;
+      font-size: 70px;
+      line-height: 100%;
+      font-weight: 700;
+    }
+  }
+  .titleH1 {
+    padding-bottom: 8px;
+    h1 {
+      font-family: $font_primary;
+      color: $blue;
+      font-size: 70px;
+      line-height: 100%;
+      font-weight: 700;
+    }
+  }
+  .titleH2 {
+    padding-bottom: 16px;
+    h2 {
+      font-family: $font_primary;
+      color: $blue;
+      font-size: 50px;
+      line-height: 110%;
+      font-weight: 700;
+      text-size-adjust: 100%;
+    }
+  }
+  .titleH3 {
+    h3 {
+      font-family: $font_primary;
+      color: $blue;
+      font-size: 35px;
+      line-height: 110%;
+      letter-spacing: normal;
+      font-weight: 700;
+    }
+  }
+  .titleH4 {
+    h4 {
+      font-family: $font_primary;
+      color: $blue;
+      font-size: 30px;
+      line-height: 110%;
+      letter-spacing: normal;
+      font-weight: 700;
+    }
+  }
+}
