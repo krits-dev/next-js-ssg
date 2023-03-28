@@ -17,7 +17,7 @@ interface IProps {
 }
 
 function FixesLinks({ fixes, start, end, search }: IProps) {
-  const fixesLinks = fixes.map(({ fixslug, _title }: ILink) => {
+  const fixesLinks = fixes?.map(({ fixslug, _title }: ILink) => {
     return (
       <Link key={_title} href={`${FIXES_PAGE}/${fixslug}`}>
         {_title}
