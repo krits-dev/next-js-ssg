@@ -5,7 +5,7 @@ import { DataService } from '@/services'
 import { AUTO_TECH_IQ } from '@/constants/api.constants'
 import { FixDetailsPageContainer } from '@/containers'
 import { IFixData } from '@/types/fixes-page/types.js'
-import { ILink } from '@/types/fixes-page/types'
+import { ILink, IStates } from '@/types/fixes-page/types'
 
 interface IProps {
   fixData: IFixData
@@ -32,7 +32,7 @@ interface IFixPath {
 
 //=> Create all pages of fixes
 export const getStaticPaths: GetStaticPaths = async () => {
-  const fixes = await DataService.GetFixes()
+  const fixes = await DataService.getFixes()
 
   const fixesPaths = fixes.map(({ top_fix_slug }: IFixPath) => ({
     top_fix_slug,
@@ -50,7 +50,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 //=> Create data object for each fix, filter fix by top_fix_slug from api/fixes
 export const getStaticProps: GetStaticProps<IProps> = async ({ params }) => {
-  const fixes = await DataService.GetFixes()
+  const fixes = await DataService.getFixes()
 
   const filteredFix = fixes.find(
     ({ top_fix_slug }: IFixPath) => top_fix_slug === params?.fix
@@ -60,7 +60,7 @@ export const getStaticProps: GetStaticProps<IProps> = async ({ params }) => {
   const fixData = {
     title: _title,
     bg_image: fix.headerImageSrc,
-    states: stateLinks.map(({ state_id, state_name, fixslug }: any) => ({
+    states: stateLinks.map(({ state_id, state_name, fixslug }: IStates) => ({
       id: state_id,
       state: state_name,
       path: fixslug,
@@ -69,11 +69,13 @@ export const getStaticProps: GetStaticProps<IProps> = async ({ params }) => {
       title: _title,
       path: fixslug,
     })),
-    all_states: allStateLinks.map(({ state_id, state_name, fixslug }: any) => ({
-      id: state_id,
-      state: state_name,
-      path: fixslug,
-    })),
+    all_states: allStateLinks.map(
+      ({ state_id, state_name, fixslug }: IStates) => ({
+        id: state_id,
+        state: state_name,
+        path: fixslug,
+      })
+    ),
   }
 
   return {

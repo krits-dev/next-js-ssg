@@ -22,7 +22,7 @@ const FixesPage: NextPage<IProps> = ({ fixes = [], pageCount = 1 }) => {
 }
 
 export async function getStaticProps() {
-  const fixes = await DataService.GetFixes()
+  const fixes = await DataService.getFixes()
 
   const fixesLinks = fixes.map(({ fixslug, _title }: ILink) => ({
     fixslug,

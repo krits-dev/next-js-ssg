@@ -2,6 +2,7 @@ import { IStates } from '@/types/fixes-page/types'
 import { ContentLayout } from '@/layouts'
 import { Title } from '@/components/UI'
 import Link from 'next/link'
+import { FIXES_PAGE } from '@/constants/routes.constants'
 import styles from './styles.module.scss'
 
 interface IProps {
@@ -12,7 +13,7 @@ interface IProps {
 
 function StateCitySection({ states = [], title, isColumn }: IProps) {
   const statesLinks = states?.map(({ id, state, path }: IStates) => (
-    <Link key={id} href={path}>
+    <Link key={id} href={`${FIXES_PAGE}/${path}`}>
       {state}
     </Link>
   ))

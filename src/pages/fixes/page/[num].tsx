@@ -25,7 +25,7 @@ const FixesLinksPage: NextPage<IProps> = ({ fixes, pageCount }) => {
 }
 
 export async function getStaticPaths() {
-  const fixes = await DataService.GetFixes()
+  const fixes = await DataService.getFixes()
 
   const filteredData = fixes?.map(({ _title, fixslug }: ILink) => ({
     _title,
@@ -46,7 +46,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps() {
-  const fixes = await DataService.GetFixes()
+  const fixes = await DataService.getFixes()
 
   const filteredFixes = fixes.map(({ _title, fixslug }: ILink) => {
     return ({

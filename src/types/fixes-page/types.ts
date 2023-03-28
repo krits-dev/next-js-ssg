@@ -12,9 +12,12 @@ export interface IFixData {
 }
 
 export interface IStates {
-  id: string
-  state: string
-  path: string
+  id?: string
+  state?: string
+  path?: string
+  state_id?: string
+  state_name?: string
+  fixslug?: string
 }
 
 export interface ILink {
