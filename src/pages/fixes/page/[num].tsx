@@ -48,10 +48,12 @@ export async function getStaticPaths() {
 export async function getStaticProps() {
   const fixes = await DataService.GetFixes()
 
-  const filteredFixes = fixes.map(({ _title, fixslug }: ILink) => ({
-    _title,
-    fixslug,
-  }))
+  const filteredFixes = fixes.map(({ _title, fixslug }: ILink) => {
+    return ({
+      _title,
+      fixslug,
+    })
+  })
 
   const pageCount = Math.ceil(filteredFixes.length / FIXES_PAGE_LIMIT)
 
